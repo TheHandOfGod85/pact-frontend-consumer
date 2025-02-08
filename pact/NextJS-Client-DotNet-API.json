@@ -1,0 +1,89 @@
+{
+  "consumer": {
+    "name": "NextJS-Client"
+  },
+  "interactions": [
+    {
+      "description": "a request for the user by id",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "there is a user"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "header": {},
+          "query": {
+            "id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            }
+          }
+        },
+        "method": "GET",
+        "path": "/user",
+        "query": {
+          "id": [
+            "1"
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "content": {
+            "id": 1,
+            "name": "John Doe"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "equality"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "13.2.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "DotNet-API"
+  }
+}
