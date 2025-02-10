@@ -3,13 +3,14 @@ import getUser from '../app/actions/getUser'
 import path from 'path'
 
 const provider = new PactV4({
-  dir: path.resolve(process.cwd(), 'pact'),
+  dir: path.resolve(process.cwd(), 'pacts'),
   consumer: 'NextJS-Client',
   provider: 'DotNet-API',
   spec: SpecificationVersion.SPECIFICATION_VERSION_V4,
 })
 
-const expectedUser = { id: 1, name: 'John Doe' }
+const expectedUser = { id: 1, name: 'John Doe'}
+// const expectedUser = { id: 1, name: 'John Doe', gender: 'M' }
 const EXPECTED_BODY = MatchersV3.equal(expectedUser)
 
 describe('GET /user', () => {
