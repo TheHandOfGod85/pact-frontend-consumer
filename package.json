@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "pact:publish": "pact-broker publish ./pacts --consumer-app-version=\"1.0.2\" --auto-detect-version-properties --broker-base-url=http://127.0.0.1:8000 --broker-username pact_workshop --broker-password pact_workshop"
+    "pact:publish": "pact-broker publish ./pacts --consumer-app-version=\"1.0.4\" --auto-detect-version-properties --broker-base-url=http://127.0.0.1:8000 --broker-username pact_workshop --broker-password pact_workshop"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.26.0",
