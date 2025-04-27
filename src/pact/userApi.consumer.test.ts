@@ -9,7 +9,8 @@ const provider = new PactV4({
   spec: SpecificationVersion.SPECIFICATION_VERSION_V4,
 })
 
-const expectedUser = { id: 1, name: 'John Doe' }
+const expectedUser = { id: 1, name: 'John Doe'}
+// const expectedUser = { id: 1, name: 'John Doe', gender: 'M' }
 const EXPECTED_BODY = MatchersV3.equal(expectedUser)
 
 describe('GET /user', () => {
