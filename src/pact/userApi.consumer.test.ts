@@ -12,6 +12,7 @@ const provider = new PactV4({
 const expectedUser = { id: 1, name: 'John Doe'}
 // const expectedUser = { id: 1, name: 'John Doe', gender: 'M' }
 const EXPECTED_BODY = MatchersV3.equal(expectedUser)
+console.log('EXPECTED_BODY', EXPECTED_BODY)
 
 describe('GET /user', () => {
   it('returns an http 200 and a user', () => {
